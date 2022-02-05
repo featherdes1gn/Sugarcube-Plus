@@ -31,4 +31,4 @@ There's also a few toggleable options, for those who want to (for example) disab
 Oh, speaking of viewport, I also increased the viewport in general. Maybe there was a good reason why it was scrunched up, but I like it better with a wider view. 
 
 # How do
-Eventually I'll write up some documentation, but for now you can just play around on the [demo site](https://vxssi.github.io/Sugarcube-Plus/index.html) to get a feel of how everything looks and operates. There are two options, `sugarcubeplus.css` and `sugarcubeplus-min.css`. They're both the same, they're just formatted differently. If you're not familiar with CSS, you should use the `sugarcubeplus.css` file, since it's actually, you know, readable.
+Eventually I'll write up some documentation, but for now you can just play around on the [demo site](https://vxssi.github.io/Sugarcube-Plus/) to get a feel of how everything looks and operates. There are two options, `sugarcubeplus.css` and `sugarcubeplus-min.css`. They're both the same, they're just formatted differently. If you're not familiar with CSS, you should use the `sugarcubeplus.css` file, since it's actually, you know, readable.
