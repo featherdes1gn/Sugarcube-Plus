@@ -30,7 +30,7 @@
 /*
 	Box classes
 	Box classes are what I call any container. Yes, CSS already has container classes, but I have an odd workflow, and I like calling them boxes.
-	Boxes work in either a span or div element. Obviously a span on takes up the width of its content, and a div takes up all available viewport space.
+	Boxes work in either a span or div element. Obviously a span only takes up the width of its content, and a div takes up all available viewport space.
 	
 	For example, lets say you want to make two boxes next to each other. 
 	
