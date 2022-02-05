@@ -27,6 +27,30 @@
 	Note; custom button classes are listed further down.
 */
 
+/*
+	Box classes
+	Box classes are what I call any container. Yes, CSS already has container classes, but I have an odd workflow, and I like calling them boxes.
+	Boxes work in either a span or div element. Obviously a span on takes up the width of its content, and a div takes up all available viewport space.
+	
+	For example, lets say you want to make two boxes next to each other. 
+	
+	<div class"FlexParentFloat">
+		<span class="box marginLeft">
+			Enter box one here
+		</span>
+		<span class="box marginRight">
+			Enter box two here
+		</span>
+	</div>
+
+	Boxes are pretty simple to use, and obviously can be extended by any of the various other classes. You can use any of the custom classes I have written,
+	or simply write your own. For example.
+
+	<span class="boxCenter textRed textCenter">Enter some shit here.</span>
+
+	Will create a box in the middle of your screen, with red text, and that text will be center-aligned. Easy, right?
+*/
+
 .box {
   background: #222222;
   border-radius: 10px;
