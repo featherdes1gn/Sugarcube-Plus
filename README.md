@@ -33,4 +33,4 @@ Oh, speaking of viewport, I also increased the viewport in general. Maybe there 
 # How do
 Eventually I'll write up some documentation, but for now you can just play around on the [demo site](https://vxssi.github.io/Sugarcube-Plus/) to get a feel of how everything looks and operates. There are two options, `sugarcubeplus.css` and `sugarcubeplus-min.css`. They're both the same, they're just formatted differently. If you're not familiar with CSS, you should use the `sugarcubeplus.css` file, since it's actually, you know, readable.
 
-P.S, thanks to TwineLab's for making this [dialog macro](https://twinelab.net/custom-macros-for-sugarcube-2/demo/). I didn't wind up using it here (yet), but I accidentially left the JS snippet in the demo site. Don't want to be a dirty pirate.
+P.S, thanks to TwineLabs for making this [dialog macro](https://twinelab.net/custom-macros-for-sugarcube-2/demo/). I didn't wind up using it here (yet), but I accidentially left the JS snippet in the demo site. Don't want to be a dirty pirate.
