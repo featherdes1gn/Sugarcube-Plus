@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+/*
+	OPTIONS 
+	Uncomment the "display" lines for the options you want to disable.
+*/
+
+#menu-item-saves {
+  /* This is the saves button */
+  /* display: none; */
+}
+
+#menu-item-restart {
+  /* This is the restart button */
+  /* display: none; */
+}
+
+#menu-item-settings {
+  /* This is the settings button */
+  /* Note that this only appears *if* you actually have settings configured */
+  /* display: none; */
+}
+
+#ui-bar {
+  /* This is for the sidebar */
+  /* display: none; */
+}
+
+
+/*
+	Custom classes
+	Note; custom button classes are listed further down.
+*/
+
+.box {
+  background: #222222;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  width: auto;
+  vertical-align: sub;
+}
+
+.boxCenter {
+  background: #222222;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 8px;
+  width: auto;
+  display: table;
+  margin: 0 auto;
+  vertical-align: sub;
+  justify-content: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.FlexParent {
+  display: flex;
+}
+
+.FlexParentFloat {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.marginLeft {
+  margin-left: 1em;
+}
+
+.marginRight {
+  margin-right: 1em;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textRed {
+  color: #FF4646;
+}
+
+.textGreen {
+  color: #4a4;
+}
+
+.textBlue {
+  color: #2768E5;
+}
+
+.textYellow {
+  color: #EAEA35;
+}
+
+.textOrange {
+  color: #F18A1B;
+}
+
+.textPurple {
+  color: #BE2CCB;
+}
+
+.textBronze {
+  color: #CD7F32;
+}
+
+.textSilver {
+  color: #C0C0C0;
+}
+
+.textGold {
+  color: #F4C430;
+}
+
+.red {
+  color: #111;
+  background-color: #FF4646;
+}
+
+.green {
+  color: #111;
+  background-color: #4a4;
+}
+
+.blue {
+  color: #111;
+  background-color: #2768E5;
+}
+
+.yellow {
+  color: #111;
+  background-color: #EAEA35;
+}
+
+.orange {
+  color: #111;
+  background-color: #F18A1B;
+}
+
+.purple {
+  color: #111;
+  background-color: #BE2CCB;
+}
+
+.bronze {
+  color: #111;
+  background-color: #CD7F32;
+}
+
+.silver {
+  color: #111;
+  background-color: #C0C0C0;
+  transition: 0.5s;
+}
+
+.gold {
+  color: #111;
+  background-color: #F4C430;
+}
+
+html {
+  font-family: 'DM Sans', sans-serif;
+  /* Better font, I think */
+  color: #ddd;
+  /* Entire page font color */
+}
+
+.passage {
+  text-align: left;
+  /* Change this to center if you want the entire passage centered. But be aware, I do have a nice grid system implace, so you can use that as well */
+  transition: opacity left 0.5s ease-in-out;
+  /* Slowing down transition timing a bit */
+  /* transition: none; */
+  /* Uncomment the above line and delete the first transition line if you don't want fading passage transitions */
+}
+
+img {
+  /* Better images; just trust me */
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #2768E5;
+  /* Link color */
+}
+
+a:hover {
+  /* Link hover properties */
+  text-decoration: none;
+  color: #ddd;
+  /* Link hover font color */
+  transition: 0.5s;
+}
+
+a.link-broken {
+  /* Broken link properties */
+  color: #FF4646;
+  /* Broken link font color */
+}
+
+a.link-broken:hover {
+  /* Broken link hover properties */
+  text-decoration: none;
+  color: #ddd;
+  /* Broken link hover font color */
+  transition: 0.5s;
+}
+
+#story {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+#ui-bar.stowed~#story {
+  margin-left: 4.5em;
+}
+
+#story {
+  /* margin-left: 2em; margin-right: 2em; */
+  /* Uncomment if you've hidden the UI bar for a fuller screenview */
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+#passages {
+  color: #ddd;
+  /* Passage font color */
+  max-width: 100%;
+  /* Expanding the passage viewport */
+}
+
+#ui-bar-body {
+  padding: 0px 0.5em;
+  /* Reducing the UI bar padding */
+}
+
+#story-title {
+  /* display: none; */
+  /* Uncomment if you want to remove the story title */
+  margin-top: 4px;
+  /* Adding more spacing for the story title */
+  font-size: 162.5%;
+  /* Default font size; you can change this value to change the size of the story title font */
+}
+
+#menu ul {
+  border: none;
+  /* Removing the menu option borders */
+}
+
+#menu li a {
+  padding: 0.25em 0.75em;
+  border: transparent;
+  /* Removing the menu option link borders */
+  border-radius: 5px;
+  /* Adding rounded borders */
+  color: #ddd;
+  /* Menu link font color */
+}
+
+#menu li a:hover {
+  /* Menu link hover properties */
+  background-color: #ddd;
+  color: #111;
+  transition: 0.8s;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#menu-core li[id|=menu-item] a:before,
+#ui-bar-history [id|=history],
+#ui-bar-toggle:before {
+  font-weight: none;
+  /* Removing bold from the back/forward and toggle button icons */
+  font-variant: normal;
+  line-height: 1;
+  vertical-align: middle;
+  /* Aligning the icons in the middle of their respective classes */
+}
+
+#ui-bar {
+  border-right: none;
+  /* Removing the little lined border on the UI bar */
+  transition: left 0.3s ease-in-out;
+}
+
+#ui-bar-toggle {
+  /* Fixing toggle button position, mostly */
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  border-right: none;
+  border: none;
+  padding: 0.3em;
+  vertical-align: baseline;
+  margin: 1px;
+  margin-top: 3px;
+}
+
+#ui-bar-toggle:hover {
+  /* Adding animations to the UI bar toggle button (when UI bar is open) */
+  padding-right: 26px;
+  background-color: #ddd;
+  color: #111;
+}
+
+#ui-bar.stowed #ui-bar-toggle:hover {
+  /* Adding animations to the UI bar toggle button (when UI bar is stowed) */
+  padding-left: 26px;
+  transform: translateX(10px);
+  color: #111;
+}
+
+#ui-bar-history [id|=history],
+#ui-bar-toggle {
+  /* Fixing annoying properties for the UI bar toggle button */
+  line-height: none;
+  color: #ddd;
+  border: none;
+}
+
+#ui-bar-history [id|=history]:hover {
+  /* Adding animations to the UI bar history buttons */
+  color: #111;
+  background: #ddd;
+}
+
+#ui-bar-history [id|=history]:hover:disabled {
+  /* Preventing animations from affecting the disabled UI bar history buttons */
+  color: #444;
+  background: unset;
+}
+
+#ui-bar-history {
+  padding: 0.3em 0.45em 0.2em;
+  /* Fixing padding for the UI bar history buttons */
+}
+
+#ui-bar-history [id|history]:hover,
+#ui-bar-history [id|history]:after {
+  /* Fixing more annoying UI bar history button properties (alignment issues, mostly) */
+  padding: 0.3em 0.45em 0.2em;
+  background-color: #ddd;
+  color: #111;
+}
+
+#ui-dialog-titlebar {
+  /* Modifying the dialog titlebar properties */
+  background-color: #444;
+  min-height: 24px;
+  position: relative;
+  margin: auto;
+  padding: 2px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 5px;
+}
+
+#ui-dialog-title {
+  /* Dialog window title text formatting */
+  padding-top: 0.3em font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3px;
+}
+
+#ui-dialog-close {
+  /* Fixing the little sliver of the bar that was under the close button on dialog windows */
+  height: 100%;
+  transition-duration: 0.5s;
+  /* Increased effect duration */
+}
+
+#ui-dialog-close:hover {
+  background-color: #FF4646;
+  border: 1px solid #FF4646;
+  color: #111;
+  transition: 0.5s;
+  /* I think this is redundent */
+}
+
+#ui-dialog-body {
+  /* Cleaning up the dialog UI to look more modern */
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+#ui-dialog-body.saves>:not(:first-child) {
+  border-top: none;
+}
+
+#ui-dialog-body.saves td:first-child {
+  min-width: unset;
+  /* Slimming down the save list numbers in the save menu */
+}
+
+#ui-dialog-body.saves ul.buttons li {
+  padding: 0.3em;
+  /* Reducing save menu button padding - slimming down the initial save menu */
+}
+
+#ui-dialog-body.saves ul.buttons li:last-child {
+  float: inline-end;
+  /* This property shouldn't work, but it does.. fixes the "Delete All" saves button alignment to allow for further alignment adjustments */
+}
+
+table {
+  border-collapse: unset;
+  /* Removing the borders on the save dialog. This will affect *all* tables, by the way, I just don't use tables and was too lazy to do it properly */
+}
+
+#ui-dialog-body.settings button[id|=setting-control].enabled {
+  /* Settings window toggle buttons properties */
+  background-color: #333;
+  border-color: #4a4;
+}
+
+#ui-dialog-body.settings button[id|=setting-control].enabled:hover {
+  /* Hover effects for the settings window toggle bottons */
+  background-color: #4a4;
+  border-color: #4a4;
+  color: #111;
+}
+
+#ui-dialog-body.settings button[id|=setting-control] {
+  /* Cleaning up disabled settings toggle buttons */
+  color: #ccc;
+  background-color: transparent;
+  border: 1px solid #333;
+  padding: 0.4em;
+}
+
+button {
+  color: #ccc;
+  border-radius: 5px;
+  background-color: #222;
+  border: none;
+  padding: auto;
+  width: auto;
+  height: auto;
+}
+
+button:hover {
+  font-weight: bold;
+  color: #111;
+  background-color: #DDDDDD;
+  transition: 0.5s;
+}
+
+button:disabled {
+  border: unset;
+  background: transparent;
+}
+
+button:disabled:hover {
+  font-weight: unset;
+  /* Have to counteract the above "font-weight" property */
+  color: #ccc;
+  /* Needed this because the default CSS sheet changes the color? I guess? I don't remember why, but if this isn't set the buttons go invisible */
+  background: transparent;
+}
+
+
+/*
+	Custom button classes. They can be used by wrapping;
+
+	```
+		<span class="btn-[color]"></span>>
+										   ```
+
+	around your button. For example, if you want a blue button, you would use;
+
+	```
+		<span class="btn-blue"><<button "Some text">><</button>></span>
+																	    ```
+
+	I'm sure there's a more elegant solution for this, but this is quick and dirty, and also retains the <<button>> macro.
+
+*/
+
+.btn-red button:hover {
+  color: #111;
+  background-color: #FF4646;
+  transition: 0.5s;
+}
+
+.btn-green button:hover {
+  color: #111;
+  background-color: #4a4;
+  transition: 0.5s;
+}
+
+.btn-blue button:hover {
+  color: #111;
+  background-color: #2768E5;
+  transition: 0.5s;
+}
+
+.btn-yellow button:hover {
+  color: #111;
+  background-color: #EAEA35;
+  transition: 0.5s;
+}
+
+.btn-orange button:hover {
+  color: #111;
+  background-color: #F18A1B;
+  transition: 0.5s;
+}
+
+.btn-purple button:hover {
+  color: #111;
+  background-color: #BE2CCB;
+  transition: 0.5s;
+}
+
+.btn-bronze button:hover {
+  color: #111;
+  background-color: #CD7F32;
+  transition: 0.5s;
+}
+
+.btn-silver button:hover {
+  color: #111;
+  background-color: #C0C0C0;
+  transition: 0.5s;
+}
+
+.btn-gold button:hover {
+  color: #111;
+  background-color: #F4C430;
+  transition: 0.5s;
+}
+
+
+/*
+	These are all user input classes. Just styling, nothing important happening here. I'd comment on everything but.. no.
+*/
+
+
+/* 
+	Text input clases 
+*/
+
+input[type="text"] {
+  background-color: 222;
+  color: #ccc;
+  border-radius: 5px;
+  border: 1px, solid, #ccc;
+  text-align: center;
+}
+
+input[type="text"]:hover {
+  color: #ccc;
+  border-color: #ccc;
+  transition: 0.5s;
+}
+
+input[type="text"]:active {
+  color: #ccc;
+  border-color: #ccc;
+  transition: 0.5s;
+}
+
+input[type="text"]:focus {
+  color: #ccc;
+  border-color: #ccc;
+  transition: 0.5s;
+}
+
+
+/* Datalist classes */
+
+input[type="datalist"] {
+  background-color: #222;
+  color: #ccc;
+  border-radius: 5px;
+}
+
+input[type="datalist"]:hover {
+  background-color: #222;
+  color: #ccc;
+  border-color: #1A60FF;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+input[type="datalist"]:active {
+  background-color: #222;
+  color: #ccc;
+  border-color: #1A60FF;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+input[type="datalist"]:focus {
+  background-color: #222;
+  color: #ccc;
+  border-color: #1A60FF;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+
+/* 
+	Select classes 
+*/
+
+select {
+  background-color: #222;
+  color: #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+select:not(:disabled):active {
+  background-color: #222;
+  color: #ccc;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+select:not(:disabled):focus {
+  background-color: #222;
+  color: #ccc;
+  border-radius: 5px;
+  transition: 0.5s;
+  ;
+}
+
+select:not(:disabled):hover {
+  color: #ccc;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+
+/* 
+	Textarea classes 
+*/
+
+textarea {
+  background-color: #222;
+  border-radius: 5px;
+}
+
+textarea:hover {
+  background-color: #222;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+textarea:active {
+  background-color: #222;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+
+/*
+	CSS is weird. Sometimes you need to use the :not pseudo class.
+*/
+
+input:not(:disabled):focus,
+input:not(:disabled):hover,
+select:not(:disabled):focus,
+select:not(:disabled):hover,
+textarea:not(:disabled):focus,
+textarea:not(:disabled):hover {
+  background-color: #333;
+  border-color: #eee;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+input,
+select,
+textarea {
+  text-align: center;
+  color: #eee;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: 0.5s;
+  vertical-align: middle;
+}
+
+.error-view {
+  border-radius: 5px;
+  /* Adding bubble border to the error window */
+  transition: 0.5s;
+}
+
+.error-view:hover {
+  background-color: #841919;
+  color: #111;
+  transition: 0.5s;
+}
+
+.error-view>.error-toggle:before,
+.error-view>.error:before,
+[data-icon-after]:after,
+[data-icon-before]:before,
+[data-icon]:before,
+a.link-external:after {
+  font-weight: none;
+  /* Removing bold font from the error icons */
+}
+
+code,
+kbd,
+pre,
+samp {
+  /* Prettier code formatting */
+  background-color: #ccc;
+  color: #222;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+/*
+
+	Grid layout! Coming soon!
+
+*/
