@@ -5,27 +5,22 @@
 	Uncomment the "display" lines for the options you want to disable.
 */
 
-#menu-item-saves {
-  /* This is the saves button */
+#menu-item-saves { /* This is the saves button */
   /* display: none; */
 }
 
-#menu-item-restart {
-  /* This is the restart button */
+#menu-item-restart { /* This is the restart button */
   /* display: none; */
 }
 
-#menu-item-settings {
-  /* This is the settings button */
+#menu-item-settings { /* This is the settings button */
   /* Note that this only appears *if* you actually have settings configured */
   /* display: none; */
 }
 
-#ui-bar {
-  /* This is for the sidebar */
+#ui-bar { /* This is for the sidebar */
   /* display: none; */
 }
-
 
 /*
 	Custom classes
@@ -84,11 +79,9 @@
 .textCenter {
   text-align: center;
 }
-
 .textLeft {
   text-align: left;
 }
-
 .textRight {
   text-align: right;
 }
@@ -173,7 +166,7 @@
 .gold {
   color: #111;
   background-color: #F4C430;
-}
+} 
 
 html {
   font-family: 'DM Sans', sans-serif;
@@ -353,6 +346,7 @@ a.link-broken:hover {
 
 #ui-bar-history {
   padding: 0.3em 0.45em 0.2em;
+  transition: 0.3s;
   /* Fixing padding for the UI bar history buttons */
 }
 
@@ -362,6 +356,7 @@ a.link-broken:hover {
   padding: 0.3em 0.45em 0.2em;
   background-color: #ddd;
   color: #111;
+  transition: 0.3s;
 }
 
 #ui-dialog-titlebar {
@@ -480,7 +475,6 @@ button:disabled:hover {
   /* Needed this because the default CSS sheet changes the color? I guess? I don't remember why, but if this isn't set the buttons go invisible */
   background: transparent;
 }
-
 
 /*
 	Custom button classes. They can be used by wrapping;
@@ -694,8 +688,8 @@ textarea:not(:disabled):hover {
   transition: 0.5s;
 }
 
-input,
-select,
+input, 
+select, 
 textarea {
   text-align: center;
   color: #eee;
@@ -719,27 +713,23 @@ textarea {
   transition: 0.5s;
 }
 
-.error-view>.error-toggle:before,
-.error-view>.error:before,
-[data-icon-after]:after,
-[data-icon-before]:before,
-[data-icon]:before,
+.error-view>.error-toggle:before, 
+.error-view>.error:before, 
+[data-icon-after]:after, 
+[data-icon-before]:before, 
+[data-icon]:before, 
 a.link-external:after {
   font-weight: none;
   /* Removing bold font from the error icons */
 }
 
-code,
-kbd,
-pre,
-samp {
-  /* Prettier code formatting */
-  background-color: #ccc;
-  color: #222;
-  border-radius: 5px;
-  padding: 5px;
+code, kbd, pre, samp {
+ /* Prettier code formatting */
+    background-color: #ccc;
+    color: #222;
+    border-radius: 5px;
+    padding: 5px;
 }
-
 
 /*
 
