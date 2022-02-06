@@ -1,5 +1,5 @@
 # SugarCube+ 2.0
-Yes. I'm already writing it. SugarCube+ was written lazily. I barely wrote any documentation, and I didn't add as much content as I originally wanted. So, I have begun to start writing 2.0 Obviously it will retain the same design elements, but with a little more polish. No release date yet. Probably within the next few days.
+Yes. I'm already writing it. SugarCube+ was written lazily. I barely wrote any documentation, and I didn't add as much content as I originally wanted. So, I have begun to start writing 2. Obviously it will retain the same design elements, but with a little more polish. No release date yet. Probably within the next few days.
 
 # SugarCube+
 I designed SC+ in about a day to give [SugarCube](https://www.motoslave.net/sugarcube/2/) a more modern UI. I got sick of playing around with CSS everytime I wanted to open Twine, so I decided to write my own CSS framework.
