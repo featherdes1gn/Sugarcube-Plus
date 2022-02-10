@@ -1,0 +1,48 @@
+<<link "Back" sugarcubejs>><</link>>
+<div class="box boxBackground">
+	<div class="box textCenter textStrong">
+		Toastr - SugarCubeJS+
+	</div>
+<br>
+	<div class="textCenter">
+		<a href="https://github.com/CodeSeven/toastr" target="_blank">Toastr</a> is a small javascript plugin that allows the user to display aesthetically pleasing notifications (or, toasts). It is easily configurable through easy-to-understand options listed in the documentation.
+		<br>
+		The toasts that we use in this demo have been slightly modified to better suit the theme of SugarCube+.
+<br>
+<br>
+	<<button "Show a toast">>
+		<<run toastr.info('I am an info toast.')>>
+	<</button>>
+	<br>
+	<br>
+	<span class="btn-red"><<button "Show an error toast">>
+		<<run toastr.error('I am an error toast.')>>
+	<</button>></span>
+	<br>
+	<br>
+	<span class="btn-green"><<button "Show a success toast">>
+		<<run toastr.success('I am a success toast.')>>
+	<</button>></span>
+		<br>
+	<br>
+	<<button "Show a toast w/ title">>
+		<<run toastr.info('and content!', 'I am a toast with a title,')>>
+	<</button>>
+</div>
+	<br>
+	<br>
+	Installing toastr is as simple as grabbing the CDN links 
+	(<<link "we recommend these">>
+		<<dialog "Toastr CDN">>
+		<div class="textCenter">
+		JS CDN: {{{https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js}}}
+		<br>
+		CSS CDN: {{{https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css}}}
+		</div>
+		<</dialog>>
+	<</link>>), and importing them into your project using the standard {{{script src=""}}} and {{{link href=""}}} functions, or directly through Twine's 							{{{Javascript}}} and {{{Stylesheet}}} managers.
+		<br>
+		<br>
+		You can see the source code that we used for our Toastr demos here.
+		<br>
+		You can see our custom stylesheet for Toastr here.
