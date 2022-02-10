@@ -1,5 +1,7 @@
 # SugarCube+ 2.0
-Yes. I'm already writing it. SugarCube+ was written lazily. I barely wrote any documentation, and I didn't add as much content as I originally wanted. So, I have begun to start writing 2. Obviously it will retain the same design elements, but with a little more polish. No release date yet. Probably within the next few days.
+SugarCube+ 2.0 has been officially released. All of the source examples can be found [here](https://github.com/vxssi/Sugarcube-Plus/tree/main/sources). Any extraneous files for external plugin libraries can be found [here](https://github.com/vxssi/Sugarcube-Plus/tree/main/extras).
+
+I'll rewrite the README in the upcoming day or so; for now I kinda want to take a break from this project.
 
 # SugarCube+
 I designed SC+ in about a day to give [SugarCube](https://www.motoslave.net/sugarcube/2/) a more modern UI. I got sick of playing around with CSS everytime I wanted to open Twine, so I decided to write my own CSS framework.
