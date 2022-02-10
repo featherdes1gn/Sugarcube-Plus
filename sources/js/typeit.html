@@ -1,0 +1,46 @@
+<<link "Back" sugarcubejs>><</link>>
+<div class="box boxBackground">
+	<div class="box textCenter textStrong">
+		TypeIt - SugarCubeJS+
+	</div>
+<br>
+		<a href="https://www.typeitjs.com/">TypeIt</a> is a plugin that allows users to configure lifelike simulated typing. Its primary function is to automatically type on screen, and is extremely easy to setup and use, despite how many options there are to play around with.
+<br>
+<br>
+		<p id="demo" class="box" style="border: 1px solid;"></p>
+
+	<br>
+	Installing TypeIt is as simple as grabbing the CDN link 
+	(<<link "we recommend this one">>
+		<<dialog "TypeIt CDN">>
+		<div class="textCenter">
+		JS CDN: {{{https://unpkg.com/typeit@8.2.0/dist/index.umd.js}}}
+		</div>
+		<</dialog>>
+	<</link>>), and importing it into your project using the standard {{{script src=""}}} function, or directly through Twine's {{{Javascript}}} manager.
+		<br>
+		<br>
+		You can see the source code that we used for our TypeIt demo here.
+
+<script>
+new TypeIt("#demo")
+  .pause(1000)
+  .type("This is the demo for TypeIt; one of the many plguins")
+  .pause(1000)
+  .delete(5, 500)
+  .type("ugins that are included with SguarCub")
+  .delete(7)
+  .type("ugarCubeJS+. ")
+  .pause(500)
+  .type("You can learn more about TypeIt <a href='https://www.typeitjs.com/'>on their website</a>.")
+  .pause(10000)
+  .type(" If you waited this long, you're either a) a really slow reader, or b) curious.")
+  .pause(550)
+  .type(" Congratulations.")
+  .pause(530)
+  .type(" This is your award.")
+  .pause(516)
+  .type(" Absolutely nothing.")
+  .go();
+</script>
+</div>
