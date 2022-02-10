@@ -1,54 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 /*
+
 	OPTIONS 
 	Uncomment the "display" lines for the options you want to disable.
+
 */
 
-#menu-item-saves { /* This is the saves button */
+#menu-item-saves { 
+  /* This is the saves button */
   /* display: none; */
 }
 
-#menu-item-restart { /* This is the restart button */
+#menu-item-restart { 
+  /* This is the restart button */
   /* display: none; */
 }
 
-#menu-item-settings { /* This is the settings button */
-  /* Note that this only appears *if* you actually have settings configured */
+#menu-item-settings { 
+  /* This is the settings button || Note that this only appears *if* you actually have settings configured */
   /* display: none; */
 }
 
-#ui-bar { /* This is for the sidebar */
+#ui-bar { 
+  /* This is for the sidebar */
   /* display: none; */
 }
 
 /*
+
 	Custom classes
 	Note; custom button classes are listed further down.
+
 */
 
-/*
+/* 
+
 	Box classes
-	Box classes are what I call any container. Yes, CSS already has container classes, but I have an odd workflow, and I like calling them boxes.
-	Boxes work in either a span or div element. Obviously a span only takes up the width of its content, and a div takes up all available viewport space.
-	
-	For example, lets say you want to make two boxes next to each other. 
-	
-	<div class"FlexParentFloat">
-		<span class="box marginLeft">
-			Enter box one here
-		</span>
-		<span class="box marginRight">
-			Enter box two here
-		</span>
-	</div>
+	<div class="box"></div>
+	<div class="boxCenter"></div>
+	<div class="boxHighlight"></div>
+	<span class="box"></span>
+	<span class="boxCenter"></span>
+	<span class="boxHighlight"></span>
 
-	Boxes are pretty simple to use, and obviously can be extended by any of the various other classes. You can use any of the custom classes I have written,
-	or simply write your own. For example.
+	boxBackground is a special class meant to be used when containing boxes within other boxes. The structure would look something like;
 
-	<span class="boxCenter textRed textCenter">Enter some shit here.</span>
+		<div class="box boxBackground">
+			<span class="box textCenter textStrong">
+				Enter some stuff here.
+			</span>
+		</div>
 
-	Will create a box in the middle of your screen, with red text, and that text will be center-aligned. Easy, right?
+	You can see how boxBackground operates on the demo site, where in the demonstrations I have contained the entire page within a "boxBackground" class.
+	boxBackground is essentially a custom container element.
+
 */
 
 .box {
@@ -71,17 +77,73 @@
   justify-content: center;
 }
 
+.boxBackground {
+  background-color: rgba(41, 41, 41, 0.2);
+}
+
+.boxHighlight {
+  background: #222222;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  width: auto;
+  vertical-align: sub;
+  transition: 0.5s;
+}
+
+.boxHighlight:hover {
+  background: #ccc;
+  color: #111;
+  transition: 0.5s;
+}
+
+/*
+
+	Alignment classes
+	<div class="justify[Side]"></div>
+	<span class="justify[Side]"></span>
+
+*/
+
 .justifyCenter {
   justify-content: center;
 }
 
-.FlexParent {
+.justifyLeft {
+  justify-content: left;
+}
+
+.justifyRight {
+  justify-content: right;
+}
+
+/*
+
+	Flex classes
+	<div class="flexParent"></span>
+	<div class="flexParent Float"></span>
+
+*/
+
+.flexParent {
   display: flex;
 }
 
-.FlexParentFloat {
+.flexParent.float {
   display: flex;
   justify-content: space-evenly;
+}
+
+/*
+
+	Margin classes
+	<div class="margin[Side]"></span>
+	<span class="margin[Side]"></span>
+
+*/
+
+.margin {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .marginLeft {
@@ -92,6 +154,13 @@
   margin-right: 1em;
 }
 
+/*
+
+	Float classes
+	<span class="float[Side]"></span>
+
+*/
+
 .floatLeft {
   float: left;
 }
@@ -99,6 +168,14 @@
 .floatRight {
   float: right;
 }
+
+/*
+
+	Text alignment classes
+	<div class="text[Alignment]"></span>
+	<span class="text[Alignment]"></span>
+
+*/
 
 .textCenter {
   text-align: center;
@@ -110,6 +187,103 @@
   text-align: right;
 }
 
+/* 
+
+	Text style classes 
+	<div class="text[Style]"></span>
+	<span class="text[Style]"></span>
+
+*/
+
+.textStrong {
+  font-weight: bold;
+}
+
+/*
+
+	Background classes
+	<div class="background[Color]"></div>
+	<span class="background[Color]"</span>
+
+	I had intended for backgrounds to be mostly used within boxes;
+	<[div|span] class="box background[Color]"></[div|span]>
+
+	But they can be used anywhere.
+
+*/
+
+.backgroundDark {
+  color: #222;
+  background-color: #111;
+}
+
+.backgroundLight {
+  color: #111111;
+  background-color: #DDDDDD;
+}
+
+.backgroundRed {
+  color: #111;
+  background-color: #FF4646;
+}
+
+.backgroundGreen {
+  color: #111;
+  background-color: #4a4;
+}
+
+.backgroundBlue {
+  color: #111;
+  background-color: #4077DD;
+}
+
+.backgroundYellow {
+  color: #111;
+  background-color: #EAEA35;
+}
+
+.backgroundOrange {
+  color: #111;
+  background-color: #F18A1B;
+}
+
+.backgroundPurple {
+  color: #111;
+  background-color: #DC67FF;
+}
+
+.backgroundBronze {
+  color: #111;
+  background-color: #CD7F32;
+}
+
+.backgroundSilver {
+  color: #111;
+  background-color: #C0C0C0;
+  transition: 0.5s;
+}
+
+.backgroundGold {
+  color: #111;
+  background-color: #F4C430;
+} 
+
+/*
+
+	Text color classes
+	<div class="text[Color]"></div>
+	<span class="text[Color]"></span>
+
+*/
+
+.textLight {
+  color: #ccc;
+}
+
+.textDark {
+  color: #111;
+}
+
 .textRed {
   color: #FF4646;
 }
@@ -119,7 +293,7 @@
 }
 
 .textBlue {
-  color: #2768E5;
+  color: #4077DD;
 }
 
 .textYellow {
@@ -131,7 +305,7 @@
 }
 
 .textPurple {
-  color: #BE2CCB;
+  color: #DC67FF;
 }
 
 .textBronze {
@@ -146,63 +320,25 @@
   color: #F4C430;
 }
 
-.red {
-  color: #111;
-  background-color: #FF4646;
-}
+/*
 
-.green {
-  color: #111;
-  background-color: #4a4;
-}
+	SugarCube+ 2.0 - writtn by vessi
+	Supersweet Edition
 
-.blue {
-  color: #111;
-  background-color: #2768E5;
-}
-
-.yellow {
-  color: #111;
-  background-color: #EAEA35;
-}
-
-.orange {
-  color: #111;
-  background-color: #F18A1B;
-}
-
-.purple {
-  color: #111;
-  background-color: #BE2CCB;
-}
-
-.bronze {
-  color: #111;
-  background-color: #CD7F32;
-}
-
-.silver {
-  color: #111;
-  background-color: #C0C0C0;
-  transition: 0.5s;
-}
-
-.gold {
-  color: #111;
-  background-color: #F4C430;
-} 
+*/
 
 html {
   font-family: 'DM Sans', sans-serif;
   /* Better font, I think */
   color: #ddd;
   /* Entire page font color */
+  
 }
 
 .passage {
   text-align: left;
-  /* Change this to center if you want the entire passage centered. But be aware, I do have a nice grid system implace, so you can use that as well */
-  transition: opacity left 0.5s ease-in-out;
+  /* Change this to center if you want the entire passage centered. But be aware, I do have a nice box system in place, so you can use that as well */
+  transition: opacity 0.5s ease-in-out;
   /* Slowing down transition timing a bit */
   /* transition: none; */
   /* Uncomment the above line and delete the first transition line if you don't want fading passage transitions */
@@ -216,7 +352,7 @@ img {
 }
 
 a {
-  color: #2768E5;
+  color: #4077DD;
   /* Link color */
 }
 
@@ -242,13 +378,44 @@ a.link-broken:hover {
   transition: 0.5s;
 }
 
-#story {
-  transition: margin-left 0.3s ease-in-out;
+/*
+
+	Icon shit
+
+*/
+
+.error-view>.error-toggle:before, 
+.error-view>.error:before, 
+[data-icon-after]:after, 
+[data-icon-before]:before, 
+[data-icon]:before, 
+a.link-external:after, 
+#ui-dialog-body.saves button[id=saves-clear]:before, 
+#ui-dialog-body.saves button[id=saves-export]:before, 
+#ui-dialog-body.saves button[id=saves-import]:before, 
+#ui-dialog-body.settings button[id|=setting-control].enabled:after, 
+#ui-dialog-body.settings button[id|=setting-control]:after, 
+#menu-core li[id|=menu-item] a:before,
+#ui-bar-history [id|=history],
+#ui-bar-toggle:before {
+  font-weight: normal;
+  /* Removing bold weight from the icons */
 }
 
-#ui-bar.stowed~#story {
-  margin-left: 4.5em;
+#menu-core li[id|=menu-item] a:before,
+#ui-bar-history [id|=history],
+#ui-bar-toggle:before {
+  font-variant: normal;
+  line-height: 1;
+  vertical-align: middle;
+  /* Aligning the menu icons (history/stow buttons) in the middle of their respective classes */
 }
+
+/*
+	
+	Story/passage display shit
+
+*/
 
 #story {
   /* margin-left: 2em; margin-right: 2em; */
@@ -256,6 +423,7 @@ a.link-broken:hover {
   -webkit-transition: margin-left 0.3s ease-in-out;
   -o-transition: margin-left 0.3s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
+  /* Slowing down transitions */
 }
 
 #passages {
@@ -265,9 +433,9 @@ a.link-broken:hover {
   /* Expanding the passage viewport */
 }
 
-#ui-bar-body {
-  padding: 0px 0.5em;
-  /* Reducing the UI bar padding */
+#ui-bar.stowed~#story {
+  margin-left: 4.5em;
+  /* Forgot why this is here; it's the size of the story page during UI bar stow, but I didn't change that. Leaving for fear of fucking something else up. */
 }
 
 #story-title {
@@ -276,48 +444,66 @@ a.link-broken:hover {
   margin-top: 4px;
   /* Adding more spacing for the story title */
   font-size: 162.5%;
-  /* Default font size; you can change this value to change the size of the story title font */
+  /* Default font size; you can change this value to change the size of the story title text */
+}
+
+#story-author {
+  margin-top: 0em;
+  /* Reducing author margin */
+  font-weight: 500;
+  /* Reducing author font size */
+}
+
+#ui-bar-body {
+  padding: 0px 0.5em;
+  /* Reducing the UI bar padding */
+}
+
+#menu li {
+  display: contents;
+  /* Removing the bars underneath the menu buttons */
 }
 
 #menu ul {
   border: none;
-  /* Removing the menu option borders */
+  /* Removing the menu options border */
 }
 
 #menu li a {
+  /* This is all for changing the way the buttons interact in the menu */
+  margin: 10px;
   padding: 0.25em 0.75em;
   border: transparent;
-  /* Removing the menu option link borders */
   border-radius: 5px;
-  /* Adding rounded borders */
-  color: #ddd;
-  /* Menu link font color */
+  /* VV This lines are for the menu button animations VV */
+  margin-left: 20%;
+  margin-right: 20%;
+  background-image: linear-gradient(to left, transparent, transparent 50%, #ddd 50%, #ddd);
+  background-position: 100% 0;
+  background-size: 210% 200%;
+  transition: all .5s ease-in;
+  /* ^^ These lines are for the menu button animations  ^^ */
 }
 
 #menu li a:hover {
-  /* Menu link hover properties */
+  /* Menu button hover properties */
   background-color: #ddd;
   color: #111;
-  transition: 0.8s;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-#menu-core li[id|=menu-item] a:before,
-#ui-bar-history [id|=history],
-#ui-bar-toggle:before {
-  font-weight: none;
-  /* Removing bold from the back/forward and toggle button icons */
-  font-variant: normal;
-  line-height: 1;
-  vertical-align: middle;
-  /* Aligning the icons in the middle of their respective classes */
+  /* VV These lines are for the button animations  VV */
+  margin-left: 20%;
+  margin-right: 20%;
+  background-position: 0 0;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  /* ^^ These lines are for the menu button animations  ^^ */
 }
 
 #ui-bar {
   border-right: none;
   /* Removing the little lined border on the UI bar */
   transition: left 0.3s ease-in-out;
+  /* I think I tried to slow down the transition here, but I don't know if it worked lmao */
 }
 
 #ui-bar-toggle {
@@ -350,7 +536,7 @@ a.link-broken:hover {
 
 #ui-bar-history [id|=history],
 #ui-bar-toggle {
-  /* Fixing annoying properties for the UI bar toggle button */
+  /* Fixing moree annoying alignment properties for the UI bar toggle/history buttons */
   line-height: none;
   color: #ddd;
   border: none;
@@ -381,6 +567,25 @@ a.link-broken:hover {
   background-color: #ddd;
   color: #111;
   transition: 0.3s;
+  /* Adding transition timing to history button on hover */
+}
+
+/* 
+	
+	Removing the menu button icons 
+
+*/
+
+#menu-item-restart a:before {
+  display: none;
+}
+
+#menu-item-saves a:before {
+  display: none;
+}
+
+#menu-item-settings a:before {
+  display: none;
 }
 
 #ui-dialog-titlebar {
@@ -407,7 +612,7 @@ a.link-broken:hover {
   /* Fixing the little sliver of the bar that was under the close button on dialog windows */
   height: 100%;
   transition-duration: 0.5s;
-  /* Increased effect duration */
+  /* Increased transition effect duration */
 }
 
 #ui-dialog-close:hover {
@@ -427,6 +632,10 @@ a.link-broken:hover {
 
 #ui-dialog-body.saves>:not(:first-child) {
   border-top: none;
+}
+
+#ui-bar-body>:not(:first-child) {
+  margin-top: auto;
 }
 
 #ui-dialog-body.saves td:first-child {
@@ -470,6 +679,12 @@ table {
   padding: 0.4em;
 }
 
+/*
+
+	Button classes
+
+*/
+
 button {
   color: #ccc;
   border-radius: 5px;
@@ -481,7 +696,6 @@ button {
 }
 
 button:hover {
-  font-weight: bold;
   color: #111;
   background-color: #DDDDDD;
   transition: 0.5s;
@@ -493,8 +707,6 @@ button:disabled {
 }
 
 button:disabled:hover {
-  font-weight: unset;
-  /* Have to counteract the above "font-weight" property */
   color: #ccc;
   /* Needed this because the default CSS sheet changes the color? I guess? I don't remember why, but if this isn't set the buttons go invisible */
   background: transparent;
@@ -549,7 +761,7 @@ button:disabled:hover {
 
 .btn-purple button:hover {
   color: #111;
-  background-color: #BE2CCB;
+  background-color: #DC67FF;
   transition: 0.5s;
 }
 
@@ -571,14 +783,157 @@ button:disabled:hover {
   transition: 0.5s;
 }
 
+.btnshadow button,
+.btnshadow-red button,
+.btnshadow-green button,
+.btnshadow-blue button,
+.btnshadow-yellow button,
+.btnshadow-orange button,
+.btnshadow-purple button,
+.btnshadow-bronze button,
+.btnshadow-silver button,
+.btnshadow-gold button {
+  background-color: transparent;
+}
+
+.btnshadow button:hover {
+  background-color: #DDDDDD;
+}
+
+.btnshadow-red button:hover {
+  background-color: #FF4646;
+}
+
+.btnshadow-green button:hover {
+  background-color: #4a4;
+}
+
+.btnshadow-blue button:hover {
+  background-color: #2768E5;
+}
+
+.btnshadow-yellow button:hover {
+  background-color: #EAEA35;
+}
+
+.btnshadow-orange button:hover {
+  background-color: #F18A1B;
+}
+
+.btnshadow-purple button:hover {
+  background-color: #DC67FF;
+}
+
+.btnshadow-bronze button:hover {
+  background-color: #CD7F32;
+}
+
+.btnshadow-silver button:hover {
+  background-color: #C0C0C0;
+}
+
+.btnshadow-gold button:hover {
+  background-color: #F4C430;
+}
+
+.btnoutline button, 
+.btnoutline-red button, 
+.btnoutline-green button, 
+.btnoutline-blue button, 
+.btnoutline-yellow button,
+.btnoutline-orange button,
+.btnoutline-purple button,
+.btnoutline-bronze button,
+.btnoutline-silver button,
+.btnoutline-gold button {
+  border: 1px solid #DDDDDD;
+  background: transparent;
+  padding: auto;
+  width: auto;
+  height: auto;
+}
+
+.btnoutline button:hover {
+  border: 1px solid #DDDDDD;
+  color: #DDD;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-red button:hover {
+  border: 1px solid #FF4646;
+  color: #FF4646;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-green button:hover {
+  border: 1px solid #4a4;
+  color: #4a4;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-blue button:hover {
+  border: 1px solid #2768E5;
+  color: #2768E5;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-yellow button:hover {
+  border: 1px solid #EAEA35;
+  color: #EAEA35;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-orange button:hover {
+  border: 1px solid #F18A1B;
+  color: #F18A1B;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-purple button:hover {
+  border: 1px solid #DC67FF;
+  color: #DC67FF;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-bronze button:hover {
+  border: 1px solid #CD7F32;
+  color: #CD7F32;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-silver button:hover {
+  border: 1px solid #C0C0C0;
+  color: #C0C0C0;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.btnoutline-gold button:hover {
+  border: 1px solid #F4C430;
+  color: #F4C430;
+  background-color: transparent;
+  transition: 0.5s;
+}
 
 /*
+
 	These are all user input classes. Just styling, nothing important happening here. I'd comment on everything but.. no.
+
 */
 
 
 /* 
+
 	Text input clases 
+
 */
 
 input[type="text"] {
@@ -608,7 +963,11 @@ input[type="text"]:focus {
 }
 
 
-/* Datalist classes */
+/* 
+
+	Datalist classes 
+
+*/
 
 input[type="datalist"] {
   background-color: #222;
@@ -642,7 +1001,9 @@ input[type="datalist"]:focus {
 
 
 /* 
+
 	Select classes 
+
 */
 
 select {
@@ -675,7 +1036,9 @@ select:not(:disabled):hover {
 
 
 /* 
+
 	Textarea classes 
+
 */
 
 textarea {
@@ -697,7 +1060,9 @@ textarea:active {
 
 
 /*
+
 	CSS is weird. Sometimes you need to use the :not pseudo class.
+
 */
 
 input:not(:disabled):focus,
@@ -737,22 +1102,13 @@ textarea {
   transition: 0.5s;
 }
 
-.error-view>.error-toggle:before, 
-.error-view>.error:before, 
-[data-icon-after]:after, 
-[data-icon-before]:before, 
-[data-icon]:before, 
-a.link-external:after {
-  font-weight: none;
-  /* Removing bold font from the error icons */
-}
-
 code, kbd, pre, samp {
- /* Prettier code formatting */
-    background-color: #ccc;
-    color: #222;
-    border-radius: 5px;
-    padding: 5px;
+ /* Prettier codeblock formatting */
+  background-color: #ccc;
+  color: #222;
+  border-radius: 5px;
+  padding: 5px;
+  line-break: anywhere;
 }
 
 /*
@@ -760,3 +1116,163 @@ code, kbd, pre, samp {
 	Grid layout! Coming soon!
 
 */
+
+/*
+
+	Card classes
+
+	Cards are a bit weird; it's probably best to learn from the source code, which can be found here;
+
+				  https://github.com/vxssi/Sugarcube-Plus/blob/main/sources/cards.html
+
+*/
+
+.cardContainer {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+.cardContainer .card {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: #222;
+	margin: 20px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cardContainer .card .cardContent {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.cardContainer .card:hover .cardContent {
+	transform: translateY(-20px);
+}
+
+.cardContainer .card .cardContent .cardImage {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.cardContainer .card .cardContent .cardImage img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: none;
+}
+
+.cardContainer .card .cardContent .cardContentBox h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+.cardContainer .card .cardContent .cardContentBox h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.cardContainer .card .sci {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+}
+
+.cardContainer .card .sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.cardContainer .card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.passage ol, .passage ul {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+/*
+
+	The download classes are a set of custom classes I made for the demo site. They *can* be used in various other stories, but they only work within
+	the menu bar, and need to be used within the StoryCaption passage, or they will not work correctly. 
+    This is (exactly) how the SugarCube+ demo site's StoryCaption passage looks, if you want to steal our example;
+
+	<span class="justifyCenter">
+		<ul class="download">
+			<li class="download">
+				<span class="download"><<button "Download">><</button>></span>
+			</li>
+		</ul>
+	</span>
+
+	I'd also recommend removing the ".download button:hover::after" class, otherwise all the buttons you use this on are going to display 
+
+	" SugarCube+ 2.0" 
+
+	on hover.
+
+*/
+
+.download button {
+  content: none;
+  margin: 10px;
+  padding: 0.25em 0.75em;
+  border: transparent;
+  border-radius: 5px;
+  margin-right: 20%;
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  transition: all .5s ease-in;
+  text-transform: uppercase;
+}
+
+.download button:hover {
+  background-color: #F4C430;
+  color: #111;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.download button:hover::after {
+  content: " SugarCube+ 2";
+  transition: all 0.2s ease;
+}
+
+.download li {
+ display: contents;
+}
+
+.download ul {
+  margin: 1em 0 0;
+  list-style-type: disc;
+}
