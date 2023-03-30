@@ -1,5 +1,5 @@
 # SugarCube+ 2.0
-SugarCube+ 2.0 has been officially released. All of the source examples can be found [here](https://github.com/vxssi/Sugarcube-Plus/tree/main/sources). Any extraneous files for external plugin libraries can be found [here](https://github.com/vxssi/Sugarcube-Plus/tree/main/extras).
+SugarCube+ 2.0 has been officially released. All of the source examples can be found [here](https://github.com/featherdes1gn/Sugarcube-Plus/tree/main/sources). Any extraneous files for external plugin libraries can be found [here](https://github.com/featherdes1gn/Sugarcube-Plus/tree/main/extras).
 
 I'll rewrite the README in the upcoming day or so; for now I kinda want to take a break from this project.
 
@@ -36,6 +36,6 @@ There's also a few toggleable options, for those who want to (for example) disab
 Oh, speaking of viewport, I also increased the viewport in general. Maybe there was a good reason why it was scrunched up, but I like it better with a wider view. 
 
 # How do
-Eventually I'll write up some documentation, but for now you can just play around on the [demo site](https://vxssi.github.io/Sugarcube-Plus/) to get a feel of how everything looks and operates. There are two options, `sugarcubeplus.css` and `sugarcubeplus-min.css`. They're both the same, they're just formatted differently. If you're not familiar with CSS, you should use the `sugarcubeplus.css` file, since it's actually, you know, readable.
+Eventually I'll write up some documentation, but for now you can just play around on the [demo site](https://featherdes1gn.github.io/Sugarcube-Plus/) to get a feel of how everything looks and operates. There are two options, `sugarcubeplus.css` and `sugarcubeplus-min.css`. They're both the same, they're just formatted differently. If you're not familiar with CSS, you should use the `sugarcubeplus.css` file, since it's actually, you know, readable.
 
 P.S, thanks to TwineLabs for making this [dialog macro](https://twinelab.net/custom-macros-for-sugarcube-2/demo/). I didn't wind up using it here (yet), but I accidentially left the JS snippet in the demo site. Don't want to be a dirty pirate.
